@@ -1,0 +1,79 @@
+<div class="wrapper">
+  <mat-sidenav-container>
+      <mat-sidenav  #sidenav role="navigation">
+        <mat-nav-list>
+            <a mat-list-item>
+              <mat-icon class="icon">web</mat-icon>
+              <span class="label">현황판</span>
+            </a>
+            <a mat-list-item>
+              <mat-icon class="icon">list</mat-icon>
+                <span class="label">회원목록</span>
+            </a>
+            <a mat-list-item>
+              <mat-icon class="icon">supervisor_account</mat-icon>
+                <span class="label">투입현황</span>
+            </a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar>
+         <div fxHide.gt-xs>
+           <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+         <div>
+          <a routerLink="/">
+            <mat-icon class="icon">home</mat-icon>
+            <span class="label">홈</span>
+          </a>
+         </div>
+         <div fxFlex fxLayout fxLayoutAlign="center" fxHide.xs>
+            <ul fxLayout fxLayoutGap="100px" class="navigation-items">
+                <li>
+                  <a>
+                    <mat-icon class="icon">web</mat-icon>
+                    <span  class="label">현황판</span>
+                    </a>
+                </li>
+                <li>
+                  <a>
+                    <mat-icon class="icon">list</mat-icon>
+                    <span class="label">회원목록</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <mat-icon class="icon">supervisor_account</mat-icon>
+                    <span class="label">투입현황</span>
+                  </a>
+                </li>
+            </ul>
+         </div>
+         <div fxLayoutAlign="flex-end" fxHide.xs>
+          <ul fxLayout fxLayoutGap="100px" class="navigation-items">
+              <li>
+                <a>
+                  <mat-icon class="icon">highlight_off</mat-icon>
+                  <span class="label">로그아웃</span>
+                </a>
+              </li>
+          </ul>
+        </div>         
+        </mat-toolbar>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+    <footer>
+      <div>
+        <span><a href="http://www.taehwainno.com/">주식회사 태화이노베이션
+          서울특별시 성동구 뚝섬로 1길 25 서울숲한라에코벨리 601호 / 대표번호 : 02-6952-9644 / E-mail : taehwainno@taehwainno.com</a></span>
+      </div>
+      <div>
+        <a href="http://www.taehwainno.com/">Copyright ⓒ2015 TaeHwa Innovation Co - SI3Team. ,Ltd All right reserved.</a>
+      </div>
+    </footer>
+</div>
