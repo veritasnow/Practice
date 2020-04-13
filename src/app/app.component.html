@@ -6,7 +6,7 @@
               <mat-icon class="icon">web</mat-icon>
               <span class="label">현황판</span>
             </a>
-            <a mat-list-item>
+            <a routerLink = '/user' mat-list-item >
               <mat-icon class="icon">list</mat-icon>
                 <span class="label">회원목록</span>
             </a>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li>
-                  <a>
+                  <a routerLink = '/user'>
                     <mat-icon class="icon">list</mat-icon>
                     <span class="label">회원목록</span>
                   </a>
@@ -63,7 +63,11 @@
         </div>         
         </mat-toolbar>
         <main>
-          <router-outlet></router-outlet>
+          <div style="display: flex;">
+            <div style="flex: 1;"></div>
+            <div style="flex: 6;"><router-outlet></router-outlet></div>
+            <div style="flex: 1;"></div>
+          </div>
         </main>
       </mat-sidenav-content>
     </mat-sidenav-container>
